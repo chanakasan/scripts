@@ -108,11 +108,11 @@ echo "- Installs Docker"
 step "1/7" "Create a new user"
 
 while true; do
-    read -r -p "Enter username (default: opsdev): " NEW_USER </dev/tty
+    read -r -p "Enter username (default: ops): " NEW_USER </dev/tty
 
     if [ -z "${NEW_USER:-}" ]; then
-        NEW_USER="opsdev"
-        info "Using default user: opsdev"
+        NEW_USER="ops"
+        info "Using default user: ops"
     fi
 
     NEW_USER=$(echo "$NEW_USER" | tr '[:upper:]' '[:lower:]')
